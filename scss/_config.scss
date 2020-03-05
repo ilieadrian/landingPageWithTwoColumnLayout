@@ -1,0 +1,43 @@
+$desktop-width: 1440px;
+$mobile-width: 375px;
+$intermediate-width: 500px;
+$intermediate-width-2: 600px;
+$primary-color: hsl(243, 87%, 12%); //Very Dark Blue
+$primary-color-2: hsl(238, 22%, 44%); //Desaturated Blue
+$accent-color: hsl(227, 4%, 50%); //Bright blue
+$accent-color-2: hsl(170, 45%, 43%); // Moderate Cyan
+$neutral-color: hsl(240, 75%, 98%); // Light Grayish Blue
+$neutral-color-2: hsl(0, 0%, 75%); // Light Gray
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin ease {
+  transition: all 0.2s ease-in;
+}
+
+// Media Query Mixins
+@mixin mediaXSmall {
+  @media screen and (max-width: 340px) {
+    @content;
+  }
+}
+
+@mixin mediaIntermediate {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mediaTablet {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 980px) {
+    @content;
+  }
+}
